@@ -335,8 +335,8 @@ export default function Home() {
             </div>
 
             {/* Professional Plan */}
-            <div className="card-bni hover:shadow-bni-hover ring-bni-red relative flex flex-col ring-2 transition">
-              <div className="bg-bni-red text-bni-white absolute -top-4 left-1/2 -translate-x-1/2 transform rounded-full px-4 py-1 text-sm font-bold">
+            <div className="card-bni hover:shadow-bni-hover ring-bni-red relative flex flex-col p-4 ring-2 transition">
+              <div className="bg-bni-red text-bni-white absolute -top-8 left-1/2 -translate-x-1/2 transform rounded-full px-4 text-sm font-bold">
                 MOST POPULAR
               </div>
               <div className="mt-4 mb-6">

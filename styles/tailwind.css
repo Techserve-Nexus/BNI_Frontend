@@ -1,19 +1,371 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+  BNI Event Hub - Tailwind CSS Configuration
+  Following BNI Brand Guidelines and Design System
 */
+
+/* Base styles */
 @layer base {
+  /* Border color compatibility for Tailwind v4 */
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  /* BNI Brand Typography */
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #64666a; /* Granite Grey */
+    line-height: 1.6;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    color: #64666a; /* Granite Grey */
+  }
+
+  /* Links */
+  a {
+    color: #cf2030; /* BNI Red */
+    transition: color 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: #a31a24; /* BNI Red Hover */
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* BNI Card Component */
+  .card-bni {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* BNI Button Primary */
+  .btn-bni-primary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    background-color: #cf2030;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-bni-primary:hover {
+    background-color: #a31a24;
+    box-shadow: 0 4px 12px rgba(207, 32, 48, 0.2);
+  }
+
+  /* BNI Button Secondary */
+  .btn-bni-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: 2px solid #cf2030;
+    color: #cf2030;
+    background-color: transparent;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-bni-secondary:hover {
+    background-color: rgba(207, 32, 48, 0.05);
+  }
+
+  /* BNI Button Outline */
+  .btn-bni-outline {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #c8c8c8;
+    color: #64666a;
+    background-color: transparent;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-bni-outline:hover {
+    background-color: #f2f2f2;
+  }
+
+  /* BNI Input Field */
+  .input-bni {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .input-bni:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #cf2030;
+    border-color: transparent;
+  }
+
+  /* BNI Badge */
+  .badge-bni {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .badge-bni-primary {
+    background-color: #cf2030;
+    color: #ffffff;
+  }
+
+  .badge-bni-success {
+    background-color: #dcfce7;
+    color: #15803d;
+  }
+
+  .badge-bni-warning {
+    background-color: #fef9c3;
+    color: #a16207;
+  }
+
+  .badge-bni-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+
+  /* BNI Container */
+  .container-bni {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-bni {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-bni {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* BNI Section */
+  .section-bni {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  /* BNI Heading Styles */
+  .heading-bni-1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #64666a;
+  }
+
+  @media (min-width: 768px) {
+    .heading-bni-1 {
+      font-size: 3rem;
+    }
+  }
+
+  .heading-bni-2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #64666a;
+  }
+
+  @media (min-width: 768px) {
+    .heading-bni-2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .heading-bni-3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #64666a;
+  }
+
+  @media (min-width: 768px) {
+    .heading-bni-3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  /* BNI Text Styles */
+  .text-bni-body {
+    font-size: 1rem;
+    color: #64666a;
+    line-height: 1.75;
+  }
+
+  .text-bni-subtitle {
+    font-size: 1.25rem;
+    color: #64666a;
+  }
+
+  /* BNI Link Styles */
+  .link-bni {
+    color: #cf2030;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .link-bni:hover {
+    color: #a31a24;
+  }
+
+  /* BNI Divider */
+  .divider-bni {
+    border-top: 1px solid rgba(200, 200, 200, 0.3);
+  }
+}
+
+/* Utility styles */
+@layer utilities {
+  /* BNI Gradient Backgrounds */
+  .bg-gradient-bni-red {
+    background: linear-gradient(to bottom right, #cf2030, #a31a24);
+  }
+
+  .bg-gradient-bni-light {
+    background: linear-gradient(to bottom right, #f2f2f2, #ffffff);
+  }
+
+  /* BNI Text Gradients */
+  .text-gradient-bni {
+    background: linear-gradient(to right, #cf2030, #a31a24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* BNI Animation */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-in-out;
+  }
+
+  /* Smooth hover lift */
+  .hover-lift {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-0.25rem);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar */
+@layer utilities {
+  .scrollbar-bni {
+    scrollbar-width: thin;
+    scrollbar-color: #cf2030 #f2f2f2;
+  }
+
+  .scrollbar-bni::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-bni::-webkit-scrollbar-track {
+    background: #f2f2f2;
+    border-radius: 4px;
+  }
+
+  .scrollbar-bni::-webkit-scrollbar-thumb {
+    background: #cf2030;
+    border-radius: 4px;
+  }
+
+  .scrollbar-bni::-webkit-scrollbar-thumb:hover {
+    background: #a31a24;
+  }
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    color: black;
+  }
+}
+
+/* Accessibility */
+@layer utilities {
+  .focus-visible-bni:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px #ffffff,
+      0 0 0 4px #cf2030;
+  }
+
+  .sr-only-bni {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }

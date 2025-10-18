@@ -1,17 +1,22 @@
-/** @type {import('tailwindcss').Config} */
-const config = {
+import type { Config } from "tailwindcss"
+
+const config: Config = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       // BNI Brand Colors
       colors: {
-        "bni-red": "#CF2030",
-        "bni-red-hover": "#a31a24",
-        "bni-grey-sterling": "#C8C8C8",
-        "bni-grey-light": "#F2F2F2",
-        "bni-grey-granite": "#64666A",
-        "bni-black": "#000000",
-        "bni-white": "#FFFFFF",
+        bni: {
+          red: "#CF2030",
+          "red-hover": "#a31a24",
+          grey: {
+            sterling: "#C8C8C8",
+            light: "#F2F2F2",
+            granite: "#64666A",
+          },
+          black: "#000000",
+          white: "#FFFFFF",
+        },
       },
 
       // BNI Border Radius
@@ -28,6 +33,11 @@ const config = {
         "bni-md": "0 4px 16px rgba(0, 0, 0, 0.1)",
         "bni-lg": "0 8px 24px rgba(0, 0, 0, 0.15)",
         "bni-xl": "0 12px 32px rgba(0, 0, 0, 0.2)",
+      },
+
+      // BNI Ring Colors
+      ringColor: {
+        "bni-red": "#CF2030",
       },
 
       // BNI Font Family
@@ -84,6 +94,14 @@ const config = {
         "bni-lg": "1024px",
         "bni-xl": "1280px",
         "bni-2xl": "1536px",
+      },
+
+      // BNI Gradient Colors
+      gradientColorStops: {
+        "bni-red": "#CF2030",
+        "bni-red-hover": "#a31a24",
+        "bni-grey-light": "#F2F2F2",
+        "bni-white": "#FFFFFF",
       },
     },
   },
