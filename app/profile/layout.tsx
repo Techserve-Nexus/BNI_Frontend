@@ -1,96 +1,96 @@
-'use client';
+"use client"
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react"
 
 /**
  * Profile Layout
  * Protected layout with client-side auth check
  */
 export default function ProfileLayout({ children }: { children: React.ReactNode }) {
-  const [isAuthed, setIsAuthed] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
+  const [isAuthed, setIsAuthed] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const router = useRouter()
 
   useEffect(() => {
     // Check for token in localStorage
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token")
     if (!token) {
-      router.push('/auth/signin');
+      router.push("/auth/signin")
     } else {
-      setIsAuthed(true);
+      setIsAuthed(true)
     }
-    setIsLoading(false);
-  }, [router]);
+    setIsLoading(false)
+  }, [router])
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    localStorage.removeItem('subscription');
-    router.push('/');
-  };
+    localStorage.removeItem("token")
+    localStorage.removeItem("user")
+    localStorage.removeItem("subscription")
+    router.push("/")
+  }
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <p className="text-bni-grey-granite">Loading...</p>
       </div>
-    );
+    )
   }
 
   if (!isAuthed) {
-    return null;
+    return null
   }
 
   return (
-    <div className="min-h-screen bg-bni-grey-light">
+    <div className="bg-bni-grey-light min-h-screen">
       {/* Header */}
-      <nav className="sticky top-0 z-40 bg-bni-white shadow-bni border-b border-bni-grey-sterling/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <nav className="bg-bni-white shadow-bni border-bni-grey-sterling/30 sticky top-0 z-40 border-b">
+        <div className="mx-auto flex max-w-7xl items-center justify-between bg-white px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <span className="text-2xl">🤝</span>
-            <Link href="/" className="text-2xl font-bold text-bni-red">
-              BNI Event Hub
+            <Link href="/" className="text-bni-red text-2xl font-bold">
+              BNI
             </Link>
           </div>
           <button
             onClick={handleLogout}
-            className="px-4 py-2 rounded-bni border border-bni-red text-bni-red font-bold hover:bg-bni-red/5 transition"
+            className="rounded-bni border-bni-red text-bni-red hover:bg-bni-red/5 border px-4 py-2 font-bold transition"
           >
             Sign Out
           </button>
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-4">
           {/* Sidebar Navigation */}
           <div className="md:col-span-1">
-            <div className="bg-bni-white rounded-lg shadow-bni p-6">
-              <h3 className="font-bold text-bni-grey-granite mb-4">Profile Menu</h3>
+            <div className="bg-bni-white shadow-bni rounded-lg p-6">
+              <h3 className="text-bni-grey-granite mb-4 font-bold">Profile Menu</h3>
               <nav className="space-y-2">
                 <Link
                   href="/profile/user"
-                  className="block px-4 py-2 rounded-bni hover:bg-bni-grey-light text-bni-grey-granite font-medium transition"
+                  className="rounded-bni hover:bg-bni-grey-light text-bni-grey-granite block px-4 py-2 font-medium transition"
                 >
                   👤 My Profile
                 </Link>
                 <Link
                   href="/profile/subscription"
-                  className="block px-4 py-2 rounded-bni hover:bg-bni-grey-light text-bni-grey-granite font-medium transition"
+                  className="rounded-bni hover:bg-bni-grey-light text-bni-grey-granite block px-4 py-2 font-medium transition"
                 >
                   💳 Subscription
                 </Link>
                 <Link
                   href="/profile/payment"
-                  className="block px-4 py-2 rounded-bni hover:bg-bni-grey-light text-bni-grey-granite font-medium transition"
+                  className="rounded-bni hover:bg-bni-grey-light text-bni-grey-granite block px-4 py-2 font-medium transition"
                 >
                   💰 Payment
                 </Link>
                 <Link
                   href="/profile/attendance"
-                  className="block px-4 py-2 rounded-bni hover:bg-bni-grey-light text-bni-grey-granite font-medium transition"
+                  className="rounded-bni hover:bg-bni-grey-light text-bni-grey-granite block px-4 py-2 font-medium transition"
                 >
                   📅 Attendance
                 </Link>
@@ -100,10 +100,10 @@ export default function ProfileLayout({ children }: { children: React.ReactNode 
 
           {/* Main Content */}
           <div className="md:col-span-3">
-            <div className="bg-bni-white rounded-lg shadow-bni p-8">{children}</div>
+            <div className="bg-bni-white shadow-bni rounded-lg p-8">{children}</div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

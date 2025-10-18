@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div className="bg-bni-white text-bni-grey-granite w-full">
       <nav className="bg-bni-white shadow-bni border-bni-grey-sterling/30 sticky top-0 z-50 border-b">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between bg-white px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <span className="text-2xl">🤝</span>
-            <span className="text-bni-red text-2xl font-bold">BNI Event Hub</span>
+            <span className="text-bni-red text-2xl font-bold">BNI</span>
           </div>
           <div className="hidden items-center gap-8 md:flex">
             <a href="#vision" className="text-bni-grey-granite hover:text-bni-red font-medium transition">

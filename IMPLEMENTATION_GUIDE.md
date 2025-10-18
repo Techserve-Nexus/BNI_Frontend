@@ -45,6 +45,7 @@ next-enterprise-main/
 ## 🎨 Design System
 
 ### Brand Colors
+
 - **Primary Red**: `#CF2030` (BNI Red)
 - **Primary Red Hover**: `#a31a24`
 - **Secondary Grey**: `#C8C8C8` (Sterling Grey)
@@ -53,23 +54,23 @@ next-enterprise-main/
 - **White**: `#FFFFFF`
 
 ### Tailwind Custom Classes
+
 All brand colors are available as `bni-*` utilities:
+
 ```tsx
-<div className="bg-bni-red text-bni-white rounded-bni shadow-bni">
-  BNI Branded Element
-</div>
+<div className="bg-bni-red text-bni-white rounded-bni shadow-bni">BNI Branded Element</div>
 ```
 
 ### Reusable Card Component
+
 ```tsx
-<div className="card-bni">
-  Content here
-</div>
+<div className="card-bni">Content here</div>
 ```
 
 ## 📱 Pages & Routes
 
 ### Public Pages
+
 - **`/`** - Landing page with hero, events preview, testimonials, and pricing
 - **`/events`** - All events listing (upcoming and past)
 - **`/events/[id]`** - Event details with memories
@@ -77,6 +78,7 @@ All brand colors are available as `bni-*` utilities:
 - **`/auth/signup`** - Sign up page
 
 ### Protected Pages (Requires Authentication)
+
 - **`/profile`** - Profile dashboard (redirects from layout if not authenticated)
 - **`/profile/user`** - User profile information
 - **`/profile/subscription`** - Subscription management
@@ -86,24 +88,28 @@ All brand colors are available as `bni-*` utilities:
 ## 🔑 Key Features
 
 ### Authentication
+
 - Client-side stub using localStorage
 - Ready to integrate with real backend
 - Session management with token storage
 - Automatic redirect to signin if not authenticated
 
 ### Data Management
+
 - Centralized constants in `lib/constants.ts`
 - JSON data files in `data/` folder
 - Easy to migrate to API endpoints
 - TypeScript interfaces for type safety
 
 ### Responsive Design
+
 - Mobile-first approach
 - Tailwind responsive utilities
 - Hamburger menu on mobile (main page)
 - Adaptive layouts
 
 ### Accessibility
+
 - Semantic HTML
 - ARIA labels
 - Keyboard navigation support
@@ -112,6 +118,7 @@ All brand colors are available as `bni-*` utilities:
 ## 🚀 Getting Started
 
 ### Installation
+
 ```bash
 # Install dependencies
 pnpm install
@@ -124,6 +131,7 @@ open http://localhost:3000
 ```
 
 ### Demo Credentials
+
 ```
 Email: demo@example.com
 Password: any password
@@ -132,69 +140,78 @@ Password: any password
 ## 📝 Component Documentation
 
 ### Hero Component
+
 ```tsx
-import Hero from '@/components/Hero';
+import Hero from "@/components/Hero"
 
 // Displays main hero section with branding
-<Hero />
+;<Hero />
 ```
 
 ### EventsList Component
+
 ```tsx
-import EventsList from '@/components/EventsList';
+import EventsList from "@/components/EventsList"
 
 // Shows event cards with limit
-<EventsList limit={3} />
+;<EventsList limit={3} />
 ```
 
 ### Testimonials Component
+
 ```tsx
-import Testimonials from '@/components/Testimonials';
+import Testimonials from "@/components/Testimonials"
 
 // Display member success stories
-<Testimonials />
+;<Testimonials />
 ```
 
 ### Appraising Component
+
 ```tsx
-import Appraising from '@/components/Appraising';
+import Appraising from "@/components/Appraising"
 
 // Shows key statistics
-<Appraising />
+;<Appraising />
 ```
 
 ### CTA Component
+
 ```tsx
-import CTA from '@/components/CTA';
+import CTA from "@/components/CTA"
 
 // Call-to-action section
-<CTA />
+;<CTA />
 ```
 
 ## 🔧 Customization
 
 ### Adding New Events
+
 Edit `data/events.ts`:
+
 ```typescript
 export const eventsData = [
   {
-    id: 'new-event',
-    title: 'New Event Title',
-    description: 'Event description',
-    date: '2025-11-01',
-    time: '10:00 AM',
-    venue: 'Venue Name',
-    location: 'City',
-    image: '/events/image.jpg',
+    id: "new-event",
+    title: "New Event Title",
+    description: "Event description",
+    date: "2025-11-01",
+    time: "10:00 AM",
+    venue: "Venue Name",
+    location: "City",
+    image: "/events/image.jpg",
     expectedAttendees: 100,
-    status: 'upcoming',
-    memories: []
-  }
-];
+    status: "upcoming",
+    memories: [],
+  },
+]
 ```
 
 ### Adding New Testimonials
+
 Edit `data/testimonials.ts`:
+
 ```typescript
 {
   id: 't_new',
@@ -209,49 +226,57 @@ Edit `data/testimonials.ts`:
 ```
 
 ### Updating Brand Colors
+
 Edit `lib/constants.ts`:
+
 ```typescript
 export const BRAND = {
   colors: {
-    primary: '#CF2030',
+    primary: "#CF2030",
     // ... update colors
-  }
-};
+  },
+}
 ```
 
 ## 🔌 API Integration
 
 ### Authentication Endpoint
+
 Replace localStorage stub in `/app/auth/signin/page.tsx`:
+
 ```typescript
 // Current: localStorage
 // TODO: Replace with API call
-const res = await fetch('/api/auth/signin', {
-  method: 'POST',
-  body: JSON.stringify({ email, password })
-});
+const res = await fetch("/api/auth/signin", {
+  method: "POST",
+  body: JSON.stringify({ email, password }),
+})
 ```
 
 ### Events Endpoint
+
 Migrate from `data/events.ts`:
+
 ```typescript
 // Current: Import from file
 // TODO: Fetch from API
-const res = await fetch('/api/events');
-const events = await res.json();
+const res = await fetch("/api/events")
+const events = await res.json()
 ```
 
 ### Payment Verification
+
 Update `/app/profile/payment/page.tsx`:
+
 ```typescript
 // Current: Stub
 // TODO: Upload to S3/Cloudinary
-const formData = new FormData();
-formData.append('file', file);
-const res = await fetch('/api/payment/upload', {
-  method: 'POST',
-  body: formData
-});
+const formData = new FormData()
+formData.append("file", file)
+const res = await fetch("/api/payment/upload", {
+  method: "POST",
+  body: formData,
+})
 ```
 
 ## 📊 Membership Plans
@@ -259,11 +284,13 @@ const res = await fetch('/api/payment/upload', {
 Three tiers are predefined in `lib/constants.ts`:
 
 1. **Starter** - $99/month
+
    - Basic features
    - Weekly meetings
    - Member directory
 
 2. **Professional** - $199/month (Most Popular)
+
    - Advanced analytics
    - Priority support
    - 1-on-1 coaching
@@ -276,12 +303,14 @@ Three tiers are predefined in `lib/constants.ts`:
 ## 🛠️ Development Tips
 
 ### Creating New Pages
+
 1. Create folder in `app/` directory
 2. Add `page.tsx` file
 3. Use 'use client' for interactive components
 4. Import components from `components/`
 
 ### Styling Guidelines
+
 - Use Tailwind classes for styling
 - Follow BNI color scheme
 - Use `rounded-bni` for borders
@@ -289,6 +318,7 @@ Three tiers are predefined in `lib/constants.ts`:
 - Keep consistency across pages
 
 ### TypeScript Usage
+
 - Define interfaces for all data types
 - Use proper typing for props
 - Avoid `any` types
@@ -325,6 +355,7 @@ Three tiers are predefined in `lib/constants.ts`:
 ## 📞 Support
 
 For questions about implementation:
+
 1. Check the code comments
 2. Review the component documentation above
 3. Refer to the project structure
@@ -336,5 +367,5 @@ This project follows the guidelines of Business Network International (BNI).
 
 ---
 
-**Last Updated**: October 18, 2025  
+**Last Updated**: October 18, 2025
 **Version**: 1.0.0
