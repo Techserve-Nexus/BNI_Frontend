@@ -1,3 +1,18 @@
+export const homeData = {
+  hero: {
+    title: 'Givers Gain®',
+    subtitle: 'Building Relationships For Life',
+    description: 'BNI provides Member-businesses with new client opportunities through a structured, positive, and professional referral program.',
+    cta: 'Join BNI Today',
+    background: '/assets/hero.jpg'
+  },
+  stats: [
+    { label: 'Global Chapters', value: '10,700+' },
+    { label: 'Members Worldwide', value: '305K+' },
+    { label: 'Annual Referrals', value: '$19.4B' }
+  ]
+};
+
 const Home_Strings = {
   meta: {
     title: "BNI | Business Network International",
