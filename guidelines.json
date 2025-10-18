@@ -1,0 +1,147 @@
+{
+    "company": {
+        "name": "BNI",
+        "vision": "Changing the way the world does business",
+        "purpose": "BNI provides Member-businesses with new client opportunities",
+        "coreValues": [
+            "Givers Gain",
+            "Building Relationships",
+            "Lifelong Learning",
+            "Traditions",
+            "Innovation",
+            "Positive Attitude",
+            "Accountability",
+            "Recognition"
+        ],
+        "brandPersonality": [
+            "Professional",
+            "Positive",
+            "Welcoming",
+            "Energetic",
+            "Trustworthy",
+            "Friendly",
+            "Fun",
+            "Caring"
+        ]
+    },
+    "colors": {
+        "primary": {
+            "name": "BNI Red",
+            "hex": "#CF2030",
+            "rgb": "207, 32, 48",
+            "pantone": "186",
+            "cmyk": "12, 100, 90, 3"
+        },
+        "secondary": {
+            "name": "Sterling Grey",
+            "hex": "#C8C8C8",
+            "rgb": "200, 200, 200",
+            "pantone": "Cool Grey 3",
+            "cmyk": "20, 15, 15, 0"
+        },
+        "backgroundLight": {
+            "name": "Sterling Light Grey",
+            "hex": "#F2F2F2",
+            "rgb": "244, 244, 244"
+        },
+        "textDark": {
+            "name": "Granite Grey",
+            "hex": "#64666A",
+            "rgb": "100, 102, 106",
+            "pantone": "Cool Grey 10",
+            "cmyk": "60, 50, 45, 20"
+        },
+        "black": {
+            "name": "Power Black",
+            "hex": "#000000",
+            "rgb": "0,0,0",
+            "pantone": "Process Black",
+            "cmyk": "0, 0, 0, 100"
+        },
+        "white": {
+            "name": "True White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+        }
+    },
+    "fonts": {
+        "primaryFont": "'Helvetica Neue', Arial, sans-serif",
+        "weights": [
+            "Regular",
+            "Italic",
+            "Bold",
+            "Bold Italic",
+            "Light",
+            "Light Italic"
+        ],
+        "usageNotes": "Use Helvetica Neue for main content and headings; Arial as fallback"
+    },
+    "logo": {
+        "mainColor": "#CF2030",
+        "usageRules": [
+            "Always use BNI Red on white or bright backgrounds",
+            "Use white logo version on dark backgrounds",
+            "Do not distort or change proportions",
+            "No patterned backgrounds behind logo",
+            "Transparent background only"
+        ]
+    },
+    "photoStyle": {
+        "foreground": [
+            "Professional",
+            "Positive",
+            "Welcoming",
+            "Engaging",
+            "Trustworthy",
+            "Friendly",
+            "Helpful"
+        ],
+        "background": [
+            "People",
+            "Depth of field",
+            "Bright",
+            "Soft focus"
+        ]
+    },
+    "templates": [
+        "Business Card",
+        "Name Badges",
+        "A4 Letterhead",
+        "Email Signature",
+        "Chapter Banners",
+        "PowerPoint",
+        "Pins",
+        "Promotional Items"
+    ],
+    "stylingGuidelines": {
+        "button": {
+            "backgroundColor": "#CF2030",
+            "color": "#FFFFFF",
+            "borderRadius": "4px",
+            "padding": "12px 20px",
+            "fontWeight": "bold",
+            "hover": {
+                "backgroundColor": "#a31a24"
+            }
+        },
+        "heading": {
+            "fontFamily": "'Helvetica Neue', Arial, sans-serif",
+            "fontWeight": "700",
+            "color": "#64666A"
+        },
+        "paragraph": {
+            "fontFamily": "'Helvetica Neue', Arial, sans-serif",
+            "fontWeight": "400",
+            "color": "#64666A",
+            "lineHeight": "1.6",
+            "fontSize": "16px"
+        },
+        "link": {
+            "color": "#CF2030",
+            "textDecoration": "underline",
+            "hover": {
+                "color": "#a31a24"
+            }
+        }
+    }
+}
