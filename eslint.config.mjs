@@ -45,7 +45,9 @@ const config = typescriptEslint.config(
 
       "import/resolver": {
         typescript: true,
-        node: true,
+        node: {
+          extensions: [".js", ".jsx", ".ts", ".tsx", ".css"],
+        },
       },
     },
     rules: {
@@ -54,6 +56,12 @@ const config = typescriptEslint.config(
         {
           argsIgnorePattern: "^_",
           varsIgnorePattern: "^_",
+        },
+      ],
+      "import/no-unresolved": [
+        "error",
+        {
+          ignore: ["^styles/", "\\.css$"],
         },
       ],
       "sort-imports": [
