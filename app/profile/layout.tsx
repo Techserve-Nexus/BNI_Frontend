@@ -67,7 +67,7 @@ export default function ProfileLayout({ children }: { children: React.ReactNode 
         <div className="grid gap-8 md:grid-cols-4">
           {/* Sidebar Navigation */}
           <div className="md:col-span-1">
-            <div className="bg-bni-white shadow-bni rounded-lg p-6">
+            <div className="bg-bni-white shadow-bni sticky top-24 h-[calc(100vh-150px)] rounded-lg p-6">
               <h3 className="text-bni-grey-granite mb-4 font-bold">Profile Menu</h3>
               <nav className="space-y-2">
                 <Link
@@ -93,6 +93,12 @@ export default function ProfileLayout({ children }: { children: React.ReactNode 
                   className="rounded-bni hover:bg-bni-grey-light text-bni-grey-granite block px-4 py-2 font-medium transition"
                 >
                   📅 Attendance
+                </Link>
+                <Link
+                  href="/profile/upcoming"
+                  className="rounded-bni hover:bg-bni-grey-light text-bni-grey-granite block px-4 py-2 font-medium transition"
+                >
+                  🔔 Upcoming & Reminders
                 </Link>
               </nav>
             </div>

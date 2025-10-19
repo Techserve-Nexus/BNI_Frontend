@@ -41,6 +41,12 @@ export default function ProfileIndex() {
           <h3 className="text-bni-grey-granite mb-2 text-lg font-bold">Attendance</h3>
           <p className="text-bni-grey-granite text-sm">Track your event attendance</p>
         </Link>
+
+        <Link href="/profile/upcoming" className="bg-bni-grey-light hover:shadow-bni-hover rounded-lg p-6 transition">
+          <div className="mb-3 text-3xl">🔔</div>
+          <h3 className="text-bni-grey-granite mb-2 text-lg font-bold">Upcoming & Reminders</h3>
+          <p className="text-bni-grey-granite text-sm">View meetings and task reminders</p>
+        </Link>
       </div>
     </div>
   )

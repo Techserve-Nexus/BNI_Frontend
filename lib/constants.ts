@@ -10,8 +10,8 @@ export const BRAND = {
   purpose: "BNI provides Member-businesses with new client opportunities",
 
   colors: {
-    primary: "#CF2030", // BNI Red
-    primaryHover: "#a31a24", // BNI Red Hover
+    primary: "#CF0230", // BNI Red (Official Brand Color)
+    primaryHover: "#a81c26", // BNI Red Hover (Darkened)
     secondary: "#C8C8C8", // Sterling Grey
     backgroundLight: "#F2F2F2", // Sterling Light Grey
     textDark: "#64666A", // Granite Grey

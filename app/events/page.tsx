@@ -137,7 +137,7 @@ export default function EventsPage() {
 
         {/* CTA */}
         <div className="from-bni-red to-bni-red-hover text-bni-white mt-16 rounded-lg bg-gradient-to-br p-8 text-center md:p-12">
-          <h3 className="mb-4 text-2xl font-bold md:text-3xl">Ready to Join BNI?</h3>
+          <h3 className="text-bni-white mb-4 text-2xl font-bold md:text-3xl">Ready to Join BNI?</h3>
           <p className="text-bni-white/90 mb-6">Be part of our thriving community of business professionals</p>
           <Link
             href="/auth/signup"

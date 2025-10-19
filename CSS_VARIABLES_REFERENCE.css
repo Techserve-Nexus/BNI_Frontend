@@ -1,0 +1,266 @@
+/* BNI Official Brand Colors - CSS Variables Reference */
+
+:root {
+  /* ================================
+     PRIMARY COLOR
+     ================================ */
+  --bni-red: #cf0230; /* Primary Brand Color */
+  --bni-red-hover: #a81c26; /* Hover State (Darkened) */
+
+  /* ================================
+     SECONDARY COLOR
+     ================================ */
+  --sterling-grey: #c8c8c8; /* Secondary Brand Color */
+
+  /* ================================
+     SUPPORTING COLORS
+     ================================ */
+  --true-white: #ffffff; /* White/Contrast */
+  --power-black: #000000; /* Black/Emphasis */
+  --granite-grey: #64666a; /* Text Color */
+  --sterling-light-grey: #f2f2f2; /* Light Backgrounds */
+
+  /* ================================
+     TYPOGRAPHY
+     ================================ */
+  --font-family-primary: "Helvetica Neue", Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* ================================
+     SHADOWS
+     ================================ */
+  --shadow-bni-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-bni-md: 0 4px 12px rgba(207, 2, 48, 0.2);
+  --shadow-bni-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-bni-xl: 0 12px 32px rgba(0, 0, 0, 0.2);
+
+  /* ================================
+     BORDER RADIUS
+     ================================ */
+  --border-radius-bni: 4px;
+  --border-radius-bni-lg: 8px;
+  --border-radius-bni-xl: 12px;
+
+  /* ================================
+     SPACING (Base Unit: 4px)
+     ================================ */
+  --spacing-bni-xs: 8px; /* 2 units */
+  --spacing-bni-sm: 12px; /* 3 units */
+  --spacing-bni-md: 16px; /* 4 units */
+  --spacing-bni-lg: 24px; /* 6 units */
+  --spacing-bni-xl: 32px; /* 8 units */
+  --spacing-bni-2xl: 48px; /* 12 units */
+  --spacing-bni-3xl: 64px; /* 16 units */
+
+  /* ================================
+     TRANSITIONS
+     ================================ */
+  --transition-bni: 200ms ease-in-out;
+  --transition-bni-slow: 300ms ease-in-out;
+
+  /* ================================
+     Z-INDEX SCALE
+     ================================ */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+}
+
+/* ================================
+   USAGE EXAMPLES
+   ================================ */
+
+/*
+  PRIMARY BUTTON
+  ============================================
+
+  .btn-primary {
+    background-color: var(--bni-red);
+    color: var(--true-white);
+    padding: var(--spacing-bni-md) var(--spacing-bni-lg);
+    border-radius: var(--border-radius-bni);
+    font-weight: var(--font-weight-bold);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-bni);
+    box-shadow: var(--shadow-bni-sm);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--bni-red-hover);
+    box-shadow: var(--shadow-bni-md);
+  }
+*/
+
+/*
+  CARD COMPONENT
+  ============================================
+
+  .card {
+    background-color: var(--true-white);
+    color: var(--granite-grey);
+    padding: var(--spacing-bni-lg);
+    border-radius: var(--border-radius-bni-lg);
+    border: 1px solid var(--sterling-grey);
+    box-shadow: var(--shadow-bni-sm);
+    font-family: var(--font-family-primary);
+  }
+*/
+
+/*
+  FORM INPUT
+  ============================================
+
+  .input {
+    border: 1px solid var(--sterling-grey);
+    border-radius: var(--border-radius-bni);
+    padding: var(--spacing-bni-sm) var(--spacing-bni-md);
+    font-family: var(--font-family-primary);
+    color: var(--granite-grey);
+  }
+
+  .input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bni-red);
+  }
+*/
+
+/*
+  HEADING
+  ============================================
+
+  h1, h2, h3 {
+    color: var(--granite-grey);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-bni-lg);
+  }
+*/
+
+/*
+  BODY TEXT
+  ============================================
+
+  body {
+    color: var(--granite-grey);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.6;
+  }
+
+  p {
+    margin-bottom: var(--spacing-bni-md);
+  }
+*/
+
+/*
+  LINK
+  ============================================
+
+  a {
+    color: var(--bni-red);
+    text-decoration: none;
+    transition: color var(--transition-bni);
+  }
+
+  a:hover {
+    color: var(--bni-red-hover);
+    text-decoration: underline;
+  }
+*/
+
+/*
+  DIVIDER
+  ============================================
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--sterling-grey);
+    margin: var(--spacing-bni-lg) 0;
+  }
+*/
+
+/*
+  BADGE
+  ============================================
+
+  .badge {
+    display: inline-block;
+    background-color: var(--bni-red);
+    color: var(--true-white);
+    padding: var(--spacing-bni-xs) var(--spacing-bni-md);
+    border-radius: 9999px;
+    font-weight: var(--font-weight-bold);
+    font-size: 0.875rem;
+  }
+*/
+
+/*
+  SECTION BACKGROUND
+  ============================================
+
+  section.light {
+    background-color: var(--sterling-light-grey);
+    padding: var(--spacing-bni-3xl) 0;
+  }
+
+  section.dark {
+    background: linear-gradient(
+      to right,
+      var(--bni-red),
+      var(--bni-red-hover)
+    );
+    color: var(--true-white);
+    padding: var(--spacing-bni-3xl) 0;
+  }
+*/
+
+/* ================================
+   TAILWIND MAPPING
+   ================================
+
+   All these CSS variables are mapped to Tailwind utilities:
+
+   Colors:
+   - bg-bni-red → background-color: var(--bni-red)
+   - text-bni-red → color: var(--bni-red)
+   - border-bni-red → border-color: var(--bni-red)
+
+   Spacing:
+   - p-bni-lg → padding: var(--spacing-bni-lg)
+   - m-bni-md → margin: var(--spacing-bni-md)
+
+   Shadows:
+   - shadow-bni → box-shadow: var(--shadow-bni-sm)
+   - shadow-bni-hover → box-shadow: var(--shadow-bni-md)
+
+   Border Radius:
+   - rounded-bni → border-radius: var(--border-radius-bni)
+
+   Transitions:
+   - transition-bni → transition: var(--transition-bni)
+*/
+
+/* ================================
+   COLOR PALETTE QUICK REFERENCE
+   ================================
+
+   ✅ Primary: #CF0230 (BNI Red)
+   ✅ Secondary: #C8C8C8 (Sterling Grey)
+   ✅ Light BG: #F2F2F2 (Sterling Light Grey)
+   ✅ Text: #64666A (Granite Grey)
+   ✅ Black: #000000 (Power Black)
+   ✅ White: #FFFFFF (True White)
+
+   Always prefer using CSS variables over hardcoded hex values!
+*/

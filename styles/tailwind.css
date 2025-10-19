@@ -1,9 +1,65 @@
 @import "tailwindcss";
 
 /*
-  BNI Event Hub - Tailwind CSS Configuration
+  BNI Event Hub - Tailwind CSS v4 Configuration
   Following BNI Brand Guidelines and Design System
 */
+
+/* Tailwind CSS v4 Theme Configuration using @theme */
+@theme {
+  /* BNI Brand Colors - Define as custom properties for Tailwind v4 */
+  --color-bni-red: #cf0230;
+  --color-bni-red-hover: #a81c26;
+  --color-bni-grey-sterling: #c8c8c8;
+  --color-bni-grey-light: #f2f2f2;
+  --color-bni-grey-granite: #64666a;
+  --color-bni-black: #000000;
+  --color-bni-white: #ffffff;
+
+  /* BNI Border Radius */
+  --radius-bni: 4px;
+  --radius-bni-lg: 8px;
+  --radius-bni-xl: 12px;
+
+  /* BNI Box Shadows */
+  --shadow-bni: 0 2px 8px rgb(0 0 0 / 0.1);
+  --shadow-bni-hover: 0 4px 12px rgb(207 2 48 / 0.2);
+  --shadow-bni-md: 0 4px 16px rgb(0 0 0 / 0.1);
+  --shadow-bni-lg: 0 8px 24px rgb(0 0 0 / 0.15);
+  --shadow-bni-xl: 0 12px 32px rgb(0 0 0 / 0.2);
+
+  /* BNI Spacing */
+  --spacing-bni-xs: 8px;
+  --spacing-bni-sm: 12px;
+  --spacing-bni-md: 16px;
+  --spacing-bni-lg: 24px;
+  --spacing-bni-xl: 32px;
+  --spacing-bni-2xl: 48px;
+  --spacing-bni-3xl: 64px;
+
+  /* BNI Typography */
+  --font-family-bni: "Helvetica Neue", Arial, sans-serif;
+
+  /* BNI Font Sizes */
+  --font-size-bni-xs: 0.75rem;
+  --font-size-bni-sm: 0.875rem;
+  --font-size-bni-base: 1rem;
+  --font-size-bni-lg: 1.125rem;
+  --font-size-bni-xl: 1.25rem;
+  --font-size-bni-2xl: 1.5rem;
+  --font-size-bni-3xl: 2rem;
+  --font-size-bni-4xl: 2.5rem;
+  --font-size-bni-5xl: 3rem;
+
+  /* BNI Z-Index */
+  --z-bni-dropdown: 1000;
+  --z-bni-sticky: 1020;
+  --z-bni-fixed: 1030;
+  --z-bni-modal-backdrop: 1040;
+  --z-bni-modal: 1050;
+  --z-bni-popover: 1060;
+  --z-bni-tooltip: 1070;
+}
 
 /* Base styles */
 @layer base {
@@ -66,7 +122,7 @@
   .btn-bni-primary {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
-    background-color: #cf2030;
+    background-color: #cf0230;
     color: #ffffff;
     font-weight: 700;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -74,23 +130,23 @@
   }
 
   .btn-bni-primary:hover {
-    background-color: #a31a24;
-    box-shadow: 0 4px 12px rgba(207, 32, 48, 0.2);
+    background-color: #a81c26;
+    box-shadow: 0 4px 12px rgba(207, 2, 48, 0.2);
   }
 
   /* BNI Button Secondary */
   .btn-bni-secondary {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
-    border: 2px solid #cf2030;
-    color: #cf2030;
+    border: 2px solid #cf0230;
+    color: #cf0230;
     background-color: transparent;
     font-weight: 700;
     transition: all 0.2s ease-in-out;
   }
 
   .btn-bni-secondary:hover {
-    background-color: rgba(207, 32, 48, 0.05);
+    background-color: rgba(207, 2, 48, 0.05);
   }
 
   /* BNI Button Outline */
@@ -133,7 +189,7 @@
   }
 
   .badge-bni-primary {
-    background-color: #cf2030;
+    background-color: #cf0230;
     color: #ffffff;
   }
 
@@ -232,13 +288,13 @@
 
   /* BNI Link Styles */
   .link-bni {
-    color: #cf2030;
+    color: #cf0230;
     font-weight: 500;
     transition: color 0.2s ease-in-out;
   }
 
   .link-bni:hover {
-    color: #a31a24;
+    color: #a81c26;
   }
 
   /* BNI Divider */
@@ -251,7 +307,7 @@
 @layer utilities {
   /* BNI Gradient Backgrounds */
   .bg-gradient-bni-red {
-    background: linear-gradient(to bottom right, #cf2030, #a31a24);
+    background: linear-gradient(to bottom right, #cf0230, #a81c26);
   }
 
   .bg-gradient-bni-light {
@@ -260,7 +316,7 @@
 
   /* BNI Text Gradients */
   .text-gradient-bni {
-    background: linear-gradient(to right, #cf2030, #a31a24);
+    background: linear-gradient(to right, #cf0230, #a81c26);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -324,12 +380,12 @@
   }
 
   .scrollbar-bni::-webkit-scrollbar-thumb {
-    background: #cf2030;
+    background: #cf0230;
     border-radius: 4px;
   }
 
   .scrollbar-bni::-webkit-scrollbar-thumb:hover {
-    background: #a31a24;
+    background: #a81c26;
   }
 }
 
@@ -354,7 +410,7 @@
     outline: none;
     box-shadow:
       0 0 0 2px #ffffff,
-      0 0 0 4px #cf2030;
+      0 0 0 4px #cf0230;
   }
 
   .sr-only-bni {
